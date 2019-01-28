@@ -1,3 +1,12 @@
+#Write a program (using functions!) that asks the user for a long string containing multiple words.
+#Print back to the user the same string, except with the words in backwards order.
+
+def reverse_words(string):
+  list_words = string.split()
+  list_reversed = reversed(list_words)
+  return ' '.join(list_reversed)
+
+
 # Create a function that takes in a string name (e.g. "James", "Cindy", etc...) and replaces all vowels with the letter x.
 # For our purposes, consider these letters as vowels: [a,e,i,o,u]). Then switch the position of the first and last letters.
 
