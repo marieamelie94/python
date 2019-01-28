@@ -1,5 +1,6 @@
 #Tic Tac Toe
 #print the game board
+#https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html
 
 def print_horiz_line():
   print(" --- " * board_size)
