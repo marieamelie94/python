@@ -1,3 +1,59 @@
+# Use a for loop and indexing to print out only the words that start with an s in this sentence:
+# "Secret agents are super good at staying hidden."
+string = "Secret agents are super good at staying hidden."
+listofwords = string.lower().split()
+print(listofwords)
+for w in listofwords:
+  if w[0] == 's':
+    print(w)
+
+# Using the same string as previously used:
+# "Secret agents are super good at staying hidden."
+# Use a for loop to only print out the words with an even number of characters/letters.
+
+for w in listofwords:
+  length = len(w)
+  if length%2 == 0:
+    print(w)
+
+# Use a list comprehension to create a list of every first letter in this string:
+# mystring = "Secret agents are super good at staying hidden."
+
+list_of_first = [w[0] for w in listofwords]
+print(list_of_first)
+
+#Use list comprehension to create a list of all the even numbers from 0 to 10.
+even = [n for n in range(1,11) if n%2 == 0]
+print(even)
+
+#Use the range function to create a list of all the even numbers from 0 to 10.
+even2 = list(range(0,11,2))
+print(even2)
+
+#Create a for loop that uses the random library to create a list of 10 random numbers.
+import random
+random10 = []
+for x in range(0,10):
+  random10.append(random.randint(0,100))
+print(random10)
+
+#Use list comprehension and the random library to create a list of 10 random numbers
+list_of_random = [random.randint(0,100) for n in range(0,10)]
+print(list_of_random)
+
+#Create a while loop that will ask the user to input an even number.
+#It should keep repeating the request until an even integer is provided.
+#You should only need to expect integers to be passed in, if the user provides a string or something else that can't be transformed to an integer with int(), then the loop should break with an error.
+result = 3
+while result%2 != 0:
+  num = int(input("provide even number"))
+   if num%2 != 0:
+    result = 1
+   else :
+    print('thank you')
+    result = 2
+
+
 #Assume you're a teacher, write a program to
 # 1- read names and total marks of 3 or more students
 # 2- rank the top 3 students
