@@ -1,3 +1,62 @@
+# Create a function that takes in a string name (e.g. "James", "Cindy", etc...) and replaces all vowels with the letter x.
+# For our purposes, consider these letters as vowels: [a,e,i,o,u]). Then switch the position of the first and last letters.
+
+def replace_and_switch(string):
+  result = list(range(len(string)))
+  print(result)
+
+  letters = (enumerate(string))
+  print(letters)
+  for i, letter in letters:
+    if letter.lower() in ['a', 'e', 'i', 'o', 'u']:
+      result[i] = 'x'
+    else:
+      result[i] = letter
+
+  last_letter = result[-1]
+  first_letter = result[0]
+  result[0] = last_letter
+  result[-1] = first_letter
+
+  return ''.join(result)
+
+
+#Given a list of integers, return True if the sequence [1,2,3] is somewhere in the list. Hint: Use slicing and a for loop.
+#In [1]:
+def sequence_check(nb):
+  for i in range(0,len(nb)-2):
+    if nb[i] == 1 and nb[i+1] == 2 and nb [i+2] == 3:
+      return True
+  return False
+
+#Given a 2 strings, create a function that returns the difference in length between them.
+#This difference in length should always be a positive number (or just 0).
+def lengh_diff(str1, str2):
+  return abs(len(str1) - len(str2))
+
+#Given a list of integers, if the length of the list is an even number,
+#return the sum of the list.
+#If the length of the list is odd, return the max value in that list.
+def sum_or_max(list_of_nb):
+  length = len(list_of_nb)
+
+  if length % 2 == 0:
+    return sum(list_of_nb)
+  else:
+    return max(list_of_nb)
+
+
+#Create a code maker function. This function will take in a string name and replace any vowels with the letter x.
+def code_maker(mystring):
+    output = list(mystring)
+    for i,letter in enumerate(mystring):
+        for vowel in ['a','e','i','o','u']:
+            if letter.lower() == vowel:
+                output[i] = 'x'
+
+    output = ''.join(output)
+    return output
+
 # Use a for loop and indexing to print out only the words that start with an s in this sentence:
 # "Secret agents are super good at staying hidden."
 string = "Secret agents are super good at staying hidden."
